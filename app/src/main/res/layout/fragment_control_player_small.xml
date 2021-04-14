@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:padding="10dp"
+    tools:context=".DetailActivity">
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgCover"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+        app:srcCompat="@drawable/disc"
+        app:strokeColor="@android:color/holo_orange_light"
+        app:strokeWidth="1dp" />
+    <TextView
+        android:id="@+id/tvTittleMusic_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="6dp"
+        android:text="ANH CHO EM"
+        android:textAllCaps="true"
+        android:textSize="16sp"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:focusable="true"
+        android:scrollHorizontally="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgCover"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/tvArtist_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="18dp"
+        android:text="tao lao"
+        android:textSize="14sp"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:focusable="true"
+        android:scrollHorizontally="true"
+        app:layout_constraintTop_toTopOf="@id/tvTittleMusic_detail"
+        app:layout_constraintStart_toEndOf="@id/imgCover"
+        />
+
+
+
+
+    <ImageButton
+        android:id="@+id/imgButton_Previous_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_button_previous"
+        app:layout_constraintStart_toEndOf="@id/tvTittleMusic_detail"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/previous" />
+    <ImageButton
+        android:id="@+id/imgButton_play_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_button_play"
+        app:layout_constraintStart_toEndOf="@id/imgButton_Previous_detail"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp" />
+    <ImageButton
+        android:id="@+id/imgButton_next_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_button_next"
+        app:layout_constraintStart_toEndOf="@id/imgButton_play_detail"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

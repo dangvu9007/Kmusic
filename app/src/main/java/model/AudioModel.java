@@ -1,17 +1,19 @@
 package model;
 
-public class AudioModel {
-   private int id;
-   private String path;
-   private String nameMusic;
-   private String artist;
-   private String album;
+import android.graphics.Bitmap;
 
+import java.io.Serializable;
 
-    public AudioModel(int id, String path, String nameMusic, String artist, String album) {
-        this.id = id;
+public class AudioModel implements Serializable {
+    private String path;
+    private String title;
+    private String artist;
+    private String album;
+    private Bitmap albumArt;
+
+    public AudioModel(String path, String title, String artist, String album) {
         this.path = path;
-        this.nameMusic = nameMusic;
+        this.title = title;
         this.artist = artist;
         this.album = album;
     }
@@ -19,16 +21,13 @@ public class AudioModel {
     public AudioModel() {
     }
 
-    public int getId() {
-        return id;
-    }
 
     public String getPath() {
         return path;
     }
 
-    public String getNameMusic() {
-        return nameMusic;
+    public String getTitle() {
+        return title;
     }
 
     public String getArtist() {
@@ -40,16 +39,12 @@ public class AudioModel {
     }
 
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public void setPath(String path) {
         this.path = path;
     }
 
-    public void setNameMusic(String nameMusic) {
-        this.nameMusic = nameMusic;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public void setArtist(String artist) {
@@ -58,5 +53,13 @@ public class AudioModel {
 
     public void setAlbum(String album) {
         this.album = album;
+    }
+
+    public Bitmap getAlbumArt() {
+        return albumArt;
+    }
+
+    public void setAlbumArt(Bitmap albumArt) {
+        this.albumArt = albumArt;
     }
 }
