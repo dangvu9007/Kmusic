@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailActivity">
+    tools:context=".activity.DetailActivity">
 
     <ImageView
         android:id="@+id/imgBack_detail"
@@ -20,9 +20,9 @@
 
     <TextView
         android:id="@+id/tvTittleMusic_detail"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="30dp"
         android:text="ANH CHO EM"
         android:textAllCaps="true"
@@ -37,7 +37,7 @@
 
     <TextView
         android:id="@+id/tvArtist_detail"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="120dp"
         android:layout_marginTop="40dp"
@@ -84,7 +84,7 @@
         app:layout_constraintTop_toBottomOf="@id/imgCover" />
     <TextView
         android:id="@+id/tvTimeCurrent_detail"
-        android:text="01:20"
+        android:text="00:00"
         android:textSize="18sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -1,4 +1,4 @@
-package com.dang.kmusic;
+package com.dang.kmusic.activity;
 
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +11,7 @@ import android.widget.SeekBar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.dang.kmusic.R;
 import com.google.android.material.imageview.ShapeableImageView;
 
 public class DetailActivity extends AppCompatActivity implements View.OnClickListener {

@@ -4,80 +4,94 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="80dp"
-    android:padding="10dp"
-    tools:context=".DetailActivity">
+    android:paddingStart="6dp"
+    android:paddingEnd="6dp"
+    tools:context=".activity.DetailActivity">
+
+    <ImageView
+        android:id="@+id/imgShowDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/up_detail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgButton_play_detail"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imgCover"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:layout_marginTop="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
         app:srcCompat="@drawable/disc"
         app:strokeColor="@android:color/holo_orange_light"
         app:strokeWidth="1dp" />
+
     <TextView
         android:id="@+id/tvTittleMusic_detail"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="30dp"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
         android:text="ANH CHO EM"
         android:textAllCaps="true"
         android:textSize="16sp"
-        android:ellipsize="marquee"
-        android:marqueeRepeatLimit="marquee_forever"
-        android:focusable="true"
-        android:scrollHorizontally="true"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toEndOf="@id/imgCover"
-        android:singleLine="true" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvArtist_detail"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="16dp"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
         android:text="tao lao"
         android:textSize="14sp"
-        android:ellipsize="marquee"
-        android:marqueeRepeatLimit="marquee_forever"
-        android:focusable="true"
-        android:scrollHorizontally="true"
-        app:layout_constraintTop_toTopOf="@id/tvTittleMusic_detail"
         app:layout_constraintStart_toEndOf="@id/imgCover"
-        />
-
-
+        app:layout_constraintTop_toTopOf="@id/tvTittleMusic_detail" />
 
 
     <ImageButton
         android:id="@+id/imgButton_Previous_detail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="26dp"
         android:background="@drawable/round_button_previous"
+        android:contentDescription="@string/previous"
         app:layout_constraintStart_toEndOf="@id/tvTittleMusic_detail"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="10dp"
-        android:contentDescription="@string/previous" />
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageButton
         android:id="@+id/imgButton_play_detail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="26dp"
         android:background="@drawable/selector_button_play"
         app:layout_constraintStart_toEndOf="@id/imgButton_Previous_detail"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp" />
+        app:layout_constraintTop_toTopOf="@id/imgShowDetail" />
+
     <ImageButton
         android:id="@+id/imgButton_next_detail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="26dp"
         android:background="@drawable/selector_button_next"
         app:layout_constraintStart_toEndOf="@id/imgButton_play_detail"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
